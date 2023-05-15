@@ -1,0 +1,29 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  &__content-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+  &__logo-text {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 77px;
+
+    color: #5e5e5e;
+  }
+  &__notes-count {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+
+    color: #b47aea;
+  }
+}

@@ -1,0 +1,12 @@
+.add-note-form {
+  background-color: white;
+  padding: 20px;
+  border-radius: 15px;
+  width: 500px;
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}

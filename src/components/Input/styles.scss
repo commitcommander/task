@@ -1,0 +1,35 @@
+@mixin text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  &__label {
+    @include text;
+    color: #5e5e5e;
+  }
+  &__input {
+    @include text;
+
+    border: 2px solid #5e5e5e;
+    border-radius: 5px;
+    padding: 10px 20px;
+    width: 100%;
+
+    &_error {
+      border-color: #ef6161;
+    }
+  }
+  &__error {
+    @include text;
+    font-size: 18px;
+    height: 19px;
+    color: #ef6161;
+  }
+}
