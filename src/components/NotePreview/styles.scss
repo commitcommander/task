@@ -1,0 +1,34 @@
+.note {
+  height: 70px;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 10px;
+
+  &__text {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+
+    color: #5e5e5e;
+  }
+}
+
+.note-list__item-enter {
+  opacity: 0;
+}
+.note-list__item-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+.note-list__item-exit {
+  opacity: 1;
+}
+.note-list__item-exit-active {
+  opacity: 0;
+  transition: opacity 500ms ease-in;
+}

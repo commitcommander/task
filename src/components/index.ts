@@ -6,3 +6,5 @@ export * from "./ModalWrapper";
 export * from "./AddNoteForm";
 export * from "./Input";
 export * from "./TextArea";
+export * from "./NotePreview";
+export * from "./DeleteNote";
