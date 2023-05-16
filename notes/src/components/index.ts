@@ -10,3 +10,4 @@ export * from "./NotePreview";
 export * from "./DeleteNote";
 export * from "./EditNoteForm";
 export * from "./SortNotes";
+export * from "./EmptyListAnimation";

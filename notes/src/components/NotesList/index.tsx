@@ -12,6 +12,7 @@ import { InputRef } from "../Input";
 import { INote } from "../../models/INote";
 import { SortNotes } from "../SortNotes";
 import { SortVars } from "../SortNotes/types";
+import { EmptyListAnimation } from "../EmptyListAnimation";
 
 export const NotesList = () => {
   const [isAddModalOpened, setIsModalOpened] = useState<boolean>(false);
@@ -51,6 +52,8 @@ export const NotesList = () => {
         return note1.dateModified.getTime() - note2.dateModified.getTime();
     }
   };
+  const filteredNotes = notes.filter(filterNotes).sort(sortFunc);
+
   return (
     <div className="note-list">
       <div className="note-list__header">
@@ -65,12 +68,9 @@ export const NotesList = () => {
           <SortNotes value={sortBy} setValue={setSortBy} />
         </div>
       </div>
-      <AddNoteForm isOpened={isAddModalOpened} setIsOpened={setModalHandler} />
-      <TransitionGroup className="note-list__items-wrapper">
-        {notes
-          .filter(filterNotes)
-          .sort(sortFunc)
-          .map((note) => {
+      {filteredNotes.length ? (
+        <TransitionGroup className="note-list__items-wrapper">
+          {filteredNotes.map((note) => {
             return (
               <CSSTransition
                 key={note.id}
@@ -89,7 +89,12 @@ export const NotesList = () => {
               </CSSTransition>
             );
           })}
-      </TransitionGroup>
+        </TransitionGroup>
+      ) : (
+        <EmptyListAnimation />
+      )}
+
+      <AddNoteForm isOpened={isAddModalOpened} setIsOpened={setModalHandler} />
     </div>
   );
 };

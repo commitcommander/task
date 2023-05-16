@@ -18,3 +18,14 @@
     justify-self: end;
   }
 }
+
+@media screen and (max-width: 1000px) {
+  .note-list {
+    &__header {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      height: auto;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.empty-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 200px);
+  &__animation {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 100px) {
+  .empty-list {
+    height: calc(100vh - 98px);
+  }
+}
