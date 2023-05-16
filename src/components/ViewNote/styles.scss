@@ -1,0 +1,57 @@
+.view-note {
+  background-color: white;
+  padding: 20px;
+  border-radius: 15px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  &__text {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__heading {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 77px;
+
+    color: #5e5e5e;
+  }
+
+  &__small-text {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 29px;
+    color: #7e7e7e;
+  }
+
+  &__body {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    height: 200px;
+
+    color: #5e5e5e;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .view-note {
+    width: 300px;
+    &__text {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
+}
