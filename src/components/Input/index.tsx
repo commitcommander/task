@@ -9,7 +9,7 @@ const Input: ForwardRefRenderFunction<HTMLInputElement, InputProps> = (
 ) => {
   return (
     <div className="input-wrapper">
-      <label className="input-wrapper__label">{label}</label>
+      {!!label && <label className="input-wrapper__label">{label}</label>}
       <input
         ref={ref}
         className={[
@@ -18,7 +18,9 @@ const Input: ForwardRefRenderFunction<HTMLInputElement, InputProps> = (
         ].join(" ")}
         {...rest}
       />
-      <span className="input-wrapper__error">{error}</span>
+      {error === null ? null : (
+        <span className="input-wrapper__error">{error}</span>
+      )}
     </div>
   );
 };

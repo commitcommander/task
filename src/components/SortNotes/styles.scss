@@ -1,0 +1,59 @@
+.sort-by {
+  gap: 10px;
+  position: relative;
+  z-index: 10;
+  align-items: center;
+  display: flex;
+  width: 292px;
+  height: 55px;
+
+  &__title {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+
+    color: #5e5e5e;
+  }
+
+  &__button-bg {
+    position: absolute;
+    border-radius: 10px;
+    background: #b47aea;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    left: 90px;
+    top: 3px;
+  }
+
+  &__button {
+    border-radius: 10px;
+    background-color: #b47aea;
+    color: white;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    padding: 10px;
+
+    &:hover {
+      background-color: #9062bc;
+    }
+  }
+
+  &__variants-wrapper {
+    display: flex;
+    flex-direction: column;
+    max-height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: all 0.5s;
+
+    &_closed {
+      max-height: 0px;
+    }
+  }
+}

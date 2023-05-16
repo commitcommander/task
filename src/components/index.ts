@@ -9,3 +9,4 @@ export * from "./TextArea";
 export * from "./NotePreview";
 export * from "./DeleteNote";
 export * from "./EditNoteForm";
+export * from "./SortNotes";
